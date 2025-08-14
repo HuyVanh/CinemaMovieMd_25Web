@@ -21,7 +21,8 @@ import BookingHistory from "./Pages/BookingHistory";
 import TicketDetail from "./Pages/TicketDetail";
 import CreateDirector from "./Pages/CreateDirector";
 import CreateEmployee from "./Pages/CreateEmployee";
-import SeatManagement from "./Pages/SeatManagement";
+// import SeatManagement from "./Pages/SeatManagement";
+import ShowtimeManagement from "./Pages/ShowtimeManagement";
 // Import thêm các component cho Genre
 import GenreList from "./Pages/GenreList";
 import CreateGenre from "./Pages/CreateGenre";
@@ -243,14 +244,14 @@ function App() {
         }
       />
 
-      <Route
+      {/* <Route
         path="/admin/seat-management"
         element={
           <ProtectedRoute>
             <SeatManagement />
           </ProtectedRoute>
         }
-      />
+      /> */}
 
       <Route
         path="/admin/bookings"
@@ -266,6 +267,16 @@ function App() {
         element={
           <ProtectedRoute>
             <TicketDetail />
+          </ProtectedRoute>
+        }
+      />
+
+      {/* 🎬 SHOWTIME MANAGEMENT ROUTE - NEW */}
+      <Route
+        path="/admin/showtimes"
+        element={
+          <ProtectedRoute>
+            <ShowtimeManagement />
           </ProtectedRoute>
         }
       />

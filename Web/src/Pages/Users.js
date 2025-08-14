@@ -25,7 +25,7 @@ import {
   CalendarOutlined,
   DollarOutlined,
 } from '@ant-design/icons';
-import ApiService from '../config/api';
+import ApiService from '../services/ApiService'; // Adjust the import path as necessary
 import moment from 'moment';
 
 const { Title } = Typography;

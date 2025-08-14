@@ -20,7 +20,7 @@ import {
   TagsOutlined
 } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
-import ApiService from '../config/api';
+import ApiService from '../services/ApiService'; // Adjust the import path as necessary
 
 const { Search } = Input;
 const { Title } = Typography;

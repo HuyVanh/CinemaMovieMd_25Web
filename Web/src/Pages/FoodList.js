@@ -23,7 +23,7 @@ import {
   UploadOutlined,
   SaveOutlined 
 } from '@ant-design/icons';
-import ApiService from '../config/api';
+import ApiService from '../services/ApiService'; // Adjust the import path as necessary
 
 const { Link: AntLink } = Typography;
 const { Search } = Input;

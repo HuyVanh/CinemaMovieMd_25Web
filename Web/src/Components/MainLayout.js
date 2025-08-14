@@ -20,6 +20,7 @@ import {
   TagsOutlined,
   HistoryOutlined,
   UsergroupAddOutlined,
+  ClockCircleOutlined,
 } from "@ant-design/icons";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import AuthService from "../services/authService";
@@ -54,6 +55,7 @@ const MainLayout = ({ children }) => {
     if (pathname.startsWith("/admin/rooms")) return "8";
     if (pathname.startsWith("/admin/seats")) return "9";
     if (pathname.startsWith("/admin/bookings")) return "10";
+    if (pathname.startsWith("/admin/showtimes")) return "11";
     return "";
   };
 
@@ -169,19 +171,19 @@ const MainLayout = ({ children }) => {
           </Menu.Item>
           
           <Menu.Item key="5" icon={<CoffeeOutlined />}>
-            <Link to="/admin/foods">Món ăn & Đồ uống</Link>
+            <Link to="/admin/foods">Quản Lý Dịch Vụ</Link>
           </Menu.Item>
           
           <Menu.Item key="6" icon={<BankOutlined />}>
-            <Link to="/admin/cinemas">Rạp phim</Link>
+            <Link to="/admin/cinemas">Quản Lý Rạp Chiếu</Link>
           </Menu.Item>
           
           <Menu.Item key="7" icon={<PercentageOutlined />}>
-            <Link to="/admin/discounts">Khuyến mãi</Link>
+            <Link to="/admin/discounts">Quản Lý Khuyen Mái</Link>
           </Menu.Item>
           
           <Menu.Item key="8" icon={<BorderOuterOutlined />}>
-            <Link to="/admin/rooms">Phòng chiếu</Link>
+            <Link to="/admin/rooms">Quản Lý Rạp Phim</Link>
           </Menu.Item>
           
           <Menu.Item key="9" icon={<AppstoreOutlined />}>
@@ -190,6 +192,10 @@ const MainLayout = ({ children }) => {
           
           <Menu.Item key="10" icon={<FileTextOutlined />}>
             <Link to="/admin/bookings">Lịch sử đặt vé</Link>
+          </Menu.Item>
+          
+          <Menu.Item key="11" icon={<ClockCircleOutlined />}>
+            <Link to="/admin/showtimes">Quản lý giờ chiếu</Link>
           </Menu.Item>
         </Menu>
 
