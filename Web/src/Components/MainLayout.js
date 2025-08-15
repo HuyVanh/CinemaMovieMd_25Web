@@ -250,7 +250,7 @@ const MainLayout = ({ children }) => {
           <Menu.Item key="8" icon={<BorderOuterOutlined />}>
             <Link to="/admin/rooms">
               <span style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                Quản Lý Rạp Phim
+                Quản Lý Phòng Chiếu
               </span>
             </Link>
           </Menu.Item>

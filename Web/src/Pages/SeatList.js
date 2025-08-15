@@ -249,6 +249,18 @@ const SeatList = () => {
     try {
       setLoading(true);
       
+      // ✅ Check duplicate seat name
+      const existingSeat = seats.find(seat => 
+        seat.name.toLowerCase() === seatForm.name.toLowerCase() && 
+        (!isEditMode || seat._id !== selectedSeat._id)
+      );
+      
+      if (existingSeat) {
+        showNotification(`Ghế ${seatForm.name} đã tồn tại trong phòng này!`, 'error');
+        setLoading(false);
+        return;
+      }
+      
       if (isEditMode && selectedSeat) {
         await ApiService.updateSeat(selectedSeat._id, {
           ...seatForm,
