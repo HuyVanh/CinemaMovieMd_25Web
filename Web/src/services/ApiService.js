@@ -703,6 +703,17 @@ class ApiService {
       method: 'DELETE',
     });
   }
+  // ============ TICKET MANAGEMENT ============
+// ... (các method cũ giữ nguyên)
+
+// ✅ THÊM 2 METHOD NÀY VÀO CUỐI PHẦN TICKET MANAGEMENT
+async getTicketsByShowtime(showtimeId) {
+  return this.request(`/tickets/showtime/${showtimeId}`);
+}
+
+async getSeatBookingStatus(showtimeId) {
+  return this.request(`/tickets/seat-status/${showtimeId}`);
+}
 }
 
 export default new ApiService();
